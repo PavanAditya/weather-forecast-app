@@ -28,9 +28,9 @@ npm run build --report
 
 * Day Time App Image
 
-![alt](src\assets\images\day-app-image.PNG)
+![Day-Image](src/assets/images/day-app-image.PNG)
 
 
 * Night Time App Image
 
-![alt](src\assets\images\night-app-image.PNG)
+![Night-Image](src/assets/images/night-app-image.PNG)
