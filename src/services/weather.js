@@ -84,6 +84,52 @@ class WeatherForecast {
     this.description = data.weather[0].description;
     this.weatherIcon = this.getWeatherIcon(data.weather[0].id);
   }
+
+  // ? Get current city and location
+  formatLocation (city, country) {
+    if (city === null && country === null) {
+      return '';
+    }
+
+    return `${city}, ${country}`;
+  }
+
+  // ? Getting the weather icon based on id, @param {Number} id - Weather ID.
+  getWeatherIcon (id) {
+    if (this.isThunderstorm(id)) {
+      return require('../assets/icons/weather/thunderstorm.svg');
+    }
+
+    if (this.isDrizzle(id) || this.isRain(id)) {
+      return require('../assets/icons/weather/rain.svg');
+    }
+
+    if (this.isSnow(id)) {
+      return require('../assets/icons/weather/snow.svg');
+    }
+
+    return require('../assets/icons/weather/cloud.svg');
+  }
+
+  // ? Thunderstorm category check, @param {Number} id - Weather ID.
+  isThunderstorm (id) {
+    return id > 199 && id < 233;
+  }
+
+  // ? Drizzle category check, @param {Number} id - Weather ID.
+  isDrizzle (id) {
+    return id > 299 && id < 322;
+  }
+
+  // ? Rain category check, @param {Number} id - Weather ID.
+  isRain (id) {
+    return id > 499 && id < 532;
+  }
+
+  // ? Snow category check, @param {Number} id - Weather ID.
+  isSnow (id) {
+    return id > 599 && id < 623;
+  }
 }
 
 export default WeatherForecast;
