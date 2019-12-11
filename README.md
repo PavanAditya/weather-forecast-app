@@ -24,3 +24,13 @@ npm run build --report
 
 ## Vue Official documentation and getting started links : https://vuejs.org/ and https://vuejs.org/v2/guide/
 ```
+# Demo Images
+
+* Day Time App Image
+
+![alt](src\assets\images\day-app-image.PNG)
+
+
+* Night Time App Image
+
+![alt](src\assets\images\night-app-image.PNG)
