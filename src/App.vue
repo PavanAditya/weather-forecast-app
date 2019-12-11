@@ -1,28 +1,92 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
+    <div class="app" :class="period">
+      <WeatherApp :class="period"></WeatherApp>
+      <AppCredits :year="year" :class="period"></AppCredits>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import WeatherApp from './components/WeatherApp'
+import AppCredits from './components/AppCredits'
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
+    WeatherApp,
+    AppCredits
+  },
+
+  data () {
+    return {
+      date: new Date
+    }
+  },
+
+  computed: {
+    year () {
+      return this.date.getFullYear();
+    },
+
+    period () {
+      let hour = this.date.getHours();
+
+      return (hour > 5 && hour < 18) ? 'app--day' : 'app--night';
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+/** Global **/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease-in;
+}
+
+/** App **/
+.app {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app--day {
+  /*background: linear-gradient(to bottom right, #6CB9C8, #6CB9C8) no-repeat;*/
+  background-color: #6cb9c8;
+}
+
+.app--night {
+  /*background: linear-gradient(to bottom right, #484F60, #484F60) no-repeat;*/
+  background-color: #484f60;
+}
+
+.app--day a:hover {
+  color: rgba(46, 146, 167, 0.9);
+}
+
+.app--night a:hover {
+  color: rgba(0, 0, 0, 0.5);
 }
 </style>
