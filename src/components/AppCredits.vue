@@ -7,6 +7,10 @@
           <cite>Pavan Aditya M S</cite>
         </a>
       </b>
+      --- Product Engineer at
+      <a href="https://igotskill.in" target="_blank" rel="noopener">
+        <b>IGS - Mindtree</b>
+      </a>
     </small>
   </footer>
 </template>
