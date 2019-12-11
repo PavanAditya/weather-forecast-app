@@ -69,12 +69,4 @@ main {
     url('../assets/images/night.jpg');
 }
 
-@media screen and (min-width: 450px) {
-  main {
-    width: 330px;
-    height: 600px;
-
-    border-radius: 5px;
-  }
-}
 </style>
