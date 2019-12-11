@@ -36,7 +36,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 section {
   width: 100%;
   padding-top: 25px;

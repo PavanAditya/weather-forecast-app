@@ -43,7 +43,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 main {
   width: 100%;
   height: 100%;

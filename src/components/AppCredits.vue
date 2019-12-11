@@ -29,7 +29,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 footer {
   text-align: center;
   position: absolute;
