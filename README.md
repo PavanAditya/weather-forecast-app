@@ -20,5 +20,7 @@ Webpack is used for packaging.
 
 # For building to production and view the bundle analyzer report
 npm run build --report
-```
+
+
 ## Vue Official documentation and getting started links : https://vuejs.org/ and https://vuejs.org/v2/guide/
+```
