@@ -86,7 +86,7 @@ class WeatherForecast {
       weather: [
         {
           id: 0,
-          description: `City Not Found. Please select any other or refresh for current.`
+          description: `City Not Found. Please refresh for current city or selecting another city.`
         }
       ],
       name: null,
