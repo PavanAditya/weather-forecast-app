@@ -8,7 +8,7 @@
 
 > Other Cities weather can also be found by selecting the city name inside the city drop down (It gets opened on clicking the current city name)
 
-# <a href="https://getmyweather.pavanaditya.com" target="_">App Demo</a>
+# <a href="https://getmyweather.pavanaditya.com" target="_blank">App Demo</a>
 
 ## Build Setup
 
