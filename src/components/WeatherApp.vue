@@ -56,7 +56,7 @@ main {
   justify-content: space-around;
   align-items: center;
 
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 38px 10px rgba(0, 0, 0, 0.3), 0 15px 15px 15px rgba(0, 0, 0, 0.22);
 }
 
 .app--day {

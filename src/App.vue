@@ -33,7 +33,7 @@ export default {
     period () {
       let hour = this.date.getHours();
 
-      return (hour > 5 && hour < 18) ? 'app--day' : 'app--night';
+      return (hour > 5 && hour < 18) ? 'app--night' : 'app--day';
     }
   }
 }
@@ -73,20 +73,20 @@ a {
 }
 
 .app--day {
-  /*background: linear-gradient(to bottom right, #6CB9C8, #6CB9C8) no-repeat;*/
-  background-color: #6cb9c8;
+  /*background: linear-gradient(to bottom right, #ffb610, #ffb610) no-repeat;*/
+  background-color: #ffbf2e;
 }
 
 .app--night {
-  /*background: linear-gradient(to bottom right, #484F60, #484F60) no-repeat;*/
-  background-color: #484f60;
+  /*background: linear-gradient(to bottom right, #171718, #171718) no-repeat;*/
+  background-color: #171718;
 }
 
 .app--day a:hover {
-  color: rgba(46, 146, 167, 0.9);
+  color: #ff4d00c4;
 }
 
 .app--night a:hover {
-  color: rgba(0, 0, 0, 0.5);
+  color: #524db3;
 }
 </style>

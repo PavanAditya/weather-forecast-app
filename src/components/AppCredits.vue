@@ -23,8 +23,7 @@ export default {
     year: {
       type: Number,
       required: true
-    },
-    blank: ' '
+    }
   }
 }
 </script>
