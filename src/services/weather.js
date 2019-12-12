@@ -18,21 +18,45 @@ class WeatherForecast {
     this.update();
   }
 
+  // ? Updating the location based on users selection
+
+  async updateLocation (location) {
+    let appId = this.key; // ? API key for the app request
+    let endpoint = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${appId}`;
+
+    let response = await fetch(endpoint);
+    // console.log(await response.json());
+    const resp = await response.json();
+    if (resp.cod === '404') {
+      this.updateForecast({}, 'err');
+    } else {
+      this.updateForecast({
+        coords: {
+          latitude: resp.coord.lat,
+          longitude: resp.coord.lon,
+        }
+      });
+    }
+  }
+
   // ? Geo Location Update using Navigator (https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition)
   update () {
     if (navigator.onLine) {
-      navigator.geolocation.getCurrentPosition(position => this.updateForecast(position));
+      navigator.geolocation.getCurrentPosition(position => this.updateForecast(position, ''));
     }
   }
 
   // ? Requesting the api call to the weather api using the current location
-  async updateForecast (position) {
+  async updateForecast (position, error) {
     let data = null;
-
-    try {
-      data = await this.getForecast(position.coords);
-    } catch (e) {
+    if (error === 'err') {
       data = this.getErrorData();
+    } else {
+      try {
+        data = await this.getForecast(position.coords);
+      } catch (e) {
+        data = this.getErrorData();
+      }
     }
 
     this.populate(data);
@@ -62,7 +86,7 @@ class WeatherForecast {
       weather: [
         {
           id: 0,
-          description: `OOppss..., Error occured`
+          description: `City Not Found. Please select any other or refresh for current.`
         }
       ],
       name: null,

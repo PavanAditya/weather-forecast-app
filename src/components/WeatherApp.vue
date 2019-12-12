@@ -16,6 +16,7 @@
       :location="this.forecast.location"
       :description="this.forecast.description"
       :icon="this.forecast.weatherIcon"
+      @clicked="getWeather"
     ></Weather>
   </main>
 </template>
@@ -39,6 +40,11 @@ export default {
     return {
       forecast: new WeatherForecast
     }
+  },
+  methods: {
+    getWeather: function (location) {
+      this.forecast.updateLocation(location);
+    }
   }
 }
 </script>
@@ -56,7 +62,8 @@ main {
   justify-content: space-around;
   align-items: center;
 
-  box-shadow: 0 19px 38px 10px rgba(0, 0, 0, 0.3), 0 15px 15px 15px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 19px 38px 10px rgba(0, 0, 0, 0.3),
+    0 15px 15px 15px rgba(0, 0, 0, 0.22);
 }
 
 .app--day {
