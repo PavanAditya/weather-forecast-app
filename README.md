@@ -1,8 +1,14 @@
-# weather-forecast-app
+# Weather Forecast App
 
 > A VueJs Project for showing the weather conditions in and around the user.
+
 > Navigator GeoLocation method is used for fetching the current coordinates of the user. (Docs: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition)
+
 > The Open Weather Map Apis are used for fetching the weather details api. (Website: https://home.openweathermap.org/)
+
+> Other Cities weather can also be found by selecting the city name inside the city drop down (It gets opened on clicking the current city name)
+
+# ![App Demo](https://getmyweather.pavanaditya.com)
 
 ## Build Setup
 
@@ -24,7 +30,7 @@ npm run build --report
 
 ## Vue Official documentation and getting started links : https://vuejs.org/ and https://vuejs.org/v2/guide/
 ```
-# Demo Images
+## Demo Images
 
 * Day Time App Image
 
@@ -34,3 +40,5 @@ npm run build --report
 * Night Time App Image
 
 ![Night-Image](src/assets/images/night-app-image.PNG)
+
+# App Demo can be found at the following website https://getmyweather.pavanaditya.com
