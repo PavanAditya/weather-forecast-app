@@ -33,7 +33,7 @@ export default {
     period () {
       let hour = this.date.getHours();
 
-      return (hour > 5 && hour < 18) ? 'app--night' : 'app--day';
+      return (hour > 5 && hour < 18) ? 'app--day' : 'app--night';
     }
   }
 }
