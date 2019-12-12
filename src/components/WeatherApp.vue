@@ -25,7 +25,7 @@
 import Weather from './Weather'
 import Temperature from './Temperature'
 import Measurements from './Measurements'
-import WeatherForecast from '../services/Weather'
+import WeatherForecast from '../services/weather'
 
 export default {
   name: 'WeatherApp',
