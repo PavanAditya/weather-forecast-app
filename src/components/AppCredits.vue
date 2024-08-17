@@ -7,10 +7,8 @@
           <cite>Pavan Aditya M S</cite>
         </a>
       </b>
-      --- Product Engineer at
-      <a href="https://igotskill.in" target="_blank" rel="noopener">
-        <b>IGS - Mindtree</b>
-      </a>
+      --- Front End Engineer 2 at
+        <b>Amazon, Hyderabad</b>
     </small>
   </footer>
 </template>
